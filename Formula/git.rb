@@ -113,6 +113,11 @@ class Git < Formula
       bin.install "git-credential-osxkeychain"
       system "make", "clean"
     end
+    
+    # Install diff-highlight
+    cd "contrib/diff-highlight" do
+      system "make", "-C"
+    end
 
     # Install the netrc credential helper
     cd "contrib/credential/netrc" do
